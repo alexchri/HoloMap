@@ -5,6 +5,8 @@ using HoloToolkit.Unity.InputModule;
 
 public class TapToInteract : MonoBehaviour, IInputClickHandler
 {
+    public GameObject Cursor;
+
     public bool clicked = false;
     public float rotationspeed = 1.0f;
     public Sprite[] Icons;
@@ -78,6 +80,10 @@ public class TapToInteract : MonoBehaviour, IInputClickHandler
         {
             foreach (Transform child in this.transform)
             {
+                if (child.gameObject.name == "Manager")
+                {
+                    continue;
+                }
                 child.gameObject.SetActive(false);
             }
         }

@@ -9,7 +9,6 @@ public class TapToOpenDoor : MonoBehaviour, IInputClickHandler
     public bool active = false;
     public float speed = 1.0f;
     public float openAngle = 90.0f;
-    private float angleError = 0.5f;
     private Quaternion startRotation;
     private Quaternion endRotation;
     private Vector3 zero;
